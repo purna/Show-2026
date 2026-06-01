@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ebbe458ef3bc5654abc7df33803e6e86
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 330140
+  packageName: Procedural City Generator
+  packageVersion: 1.0
+  assetPath: Assets/ProceduralCityGenerator/Prefabs/Objects/Roads/Road_Cross.prefab
+  uploadId: 793686

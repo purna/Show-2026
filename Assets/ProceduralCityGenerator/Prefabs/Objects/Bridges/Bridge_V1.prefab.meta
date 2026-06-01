@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b794e71d9f4544e429ec918238d9569d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 330140
+  packageName: Procedural City Generator
+  packageVersion: 1.0
+  assetPath: Assets/ProceduralCityGenerator/Prefabs/Objects/Bridges/Bridge_V1.prefab
+  uploadId: 793686

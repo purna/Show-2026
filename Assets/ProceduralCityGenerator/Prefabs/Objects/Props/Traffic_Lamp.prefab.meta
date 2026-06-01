@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4478329be73aacb4ca0c76ee183a29b8
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 330140
+  packageName: Procedural City Generator
+  packageVersion: 1.0
+  assetPath: Assets/ProceduralCityGenerator/Prefabs/Objects/Props/Traffic_Lamp.prefab
+  uploadId: 793686

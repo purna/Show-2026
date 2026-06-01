@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4a536693142b6f043ab9b842f57cd998
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 330140
+  packageName: Procedural City Generator
+  packageVersion: 1.0
+  assetPath: Assets/ProceduralCityGenerator/Prefabs/Objects/Props/Street_Plate.prefab
+  uploadId: 793686

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b00a41c8bf8645b49ad4f5e7a3896c9f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 330140
+  packageName: Procedural City Generator
+  packageVersion: 1.0
+  assetPath: Assets/ProceduralCityGenerator/Prefabs/Tile_BuildingsAndRoads/Building8.prefab
+  uploadId: 793686

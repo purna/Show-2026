@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 964a1f66b34e83942867c5f0a3726ac6
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 330140
+  packageName: Procedural City Generator
+  packageVersion: 1.0
+  assetPath: Assets/ProceduralCityGenerator/Prefabs/Tile_BuildingsAndRoads/PathCornerC.prefab
+  uploadId: 793686

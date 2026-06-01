@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f1d97194eee9697488aa05f2d0c7f08c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 330140
+  packageName: Procedural City Generator
+  packageVersion: 1.0
+  assetPath: Assets/ProceduralCityGenerator/Materials/Roads/Road_Mat.mat
+  uploadId: 793686

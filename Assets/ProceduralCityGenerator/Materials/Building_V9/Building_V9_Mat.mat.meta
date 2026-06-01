@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ece28a19fa50c1f47b72d7967a25141c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 330140
+  packageName: Procedural City Generator
+  packageVersion: 1.0
+  assetPath: Assets/ProceduralCityGenerator/Materials/Building_V9/Building_V9_Mat.mat
+  uploadId: 793686

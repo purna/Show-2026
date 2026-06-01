@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b7ebeefd678f62e43a809b510e07ec75
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 330140
+  packageName: Procedural City Generator
+  packageVersion: 1.0
+  assetPath: Assets/ProceduralCityGenerator/Prefabs/Objects/Buildings/Building_V2.prefab
+  uploadId: 793686

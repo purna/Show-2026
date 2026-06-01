@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 49f3cc8055669464c8287d579e1f4f7b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 330140
+  packageName: Procedural City Generator
+  packageVersion: 1.0
+  assetPath: Assets/ProceduralCityGenerator/Materials/Roads/RoadEdge_Mat.mat
+  uploadId: 793686
