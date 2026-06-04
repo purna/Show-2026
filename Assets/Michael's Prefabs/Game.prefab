@@ -362,6 +362,7 @@ GameObject:
   - component: {fileID: 3652878766760165812}
   - component: {fileID: 6194802440353453244}
   - component: {fileID: 4754838243726323354}
+  - component: {fileID: 3312376333034959521}
   m_Layer: 0
   m_Name: Game
   m_TagString: Game
@@ -453,7 +454,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -470,9 +471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bff36da8f1359b4a8dd371d55f46581, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameImage: {fileID: 21300000, guid: 43461906cda6c2e4c92be89e123c661d, type: 3}
-  Author: Michael Fowler
-  GameName: The adventures of Puffy
+  Game: {fileID: 11400000, guid: 6a9b4b77820b05246bec3d3225b32f5d, type: 2}
 --- !u!114 &4754838243726323354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -485,3 +484,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3caaf12f85dda1e4892811889a5cf26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &3312376333034959521
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6376820949981739021}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.01, y: 1.24, z: 0.01}
+  m_Center: {x: -0.00000008940697, y: -0.13, z: 0.00000023841858}
