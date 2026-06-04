@@ -115,8 +115,8 @@
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.12\Runtime\UniversalRenderPipelineCore.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.12\Runtime\IntermediateTextureMode.cs" />
     <Compile Include="Assets\FlatKit\[Render Pipeline] URP\EditorAttributes\Core\DrawerAttributes\ShowAssetPreviewAttribute.cs" />
-    <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.12\Runtime\ForwardRendererData.cs" />
     <Compile Include="Assets\FlatKit\[Render Pipeline] URP\EditorAttributes\Core\ValidatorAttributes\MinValueAttribute.cs" />
+    <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.12\Runtime\ForwardRendererData.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.12\Runtime\Passes\DrawScreenSpaceUIPass.cs" />
     <Compile Include="Assets\FlatKit\[Render Pipeline] URP\EditorAttributes\Core\Utility\EConditionOperator.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.12\Runtime\2D\CinemachineUniversalPixelPerfect.cs" />
@@ -139,8 +139,8 @@
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.12\Runtime\Memory\Fixed2.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.12\Runtime\2D\UTess2D\PlanarGraph.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.12\Runtime\StencilUsage.cs" />
-    <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.12\Runtime\ComponentUtility.cs" />
     <Compile Include="Assets\FlatKit\[Render Pipeline] URP\RenderFeatures\Common\RendererFeatureUtils.cs" />
+    <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.12\Runtime\ComponentUtility.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.12\Runtime\2D\Passes\Render2DLightingPass.cs" />
     <Compile Include="Assets\FlatKit\[Render Pipeline] URP\EditorAttributes\Core\DrawerAttributes\ReadOnlyAttribute.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.12\Runtime\Debug\DebugDisplaySettingsLighting.cs" />
@@ -628,10 +628,6 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\PlaybackEngines\WebGLSupport\UnityEditor.WebGL.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEditor.OSXStandalone.Extensions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\PlaybackEngines\MacStandaloneSupport\UnityEditor.OSXStandalone.Extensions.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="UnityEditor.Android.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
       <Private>False</Private>
@@ -640,24 +636,8 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEditor.VisionOS.Extensions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\PlaybackEngines\VisionOSPlayer\UnityEditor.VisionOS.Extensions.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.AppleTV.Extensions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\PlaybackEngines\AppleTVSupport\UnityEditor.AppleTV.Extensions.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.LinuxStandalone.Extensions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\PlaybackEngines\LinuxStandaloneSupport\UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.UWP.Extensions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\PlaybackEngines\MetroSupport\UnityEditor.UWP.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
@@ -693,18 +673,6 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\PlaybackEngines\AppleTVSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\PlaybackEngines\VisionOSPlayer\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\PlaybackEngines\VisionOSPlayer\UnityEditor.iOS.Extensions.Common.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
       <Private>False</Private>
     </Reference>
@@ -722,10 +690,6 @@
     </Reference>
     <Reference Include="Unity.Android.GradleProject">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.GradleProject.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\PlaybackEngines\MacStandaloneSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">

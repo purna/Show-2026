@@ -60,44 +60,92 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Mini First Person Controller\Scripts\Components\FirstPersonAudio.cs" />
     <Compile Include="Assets\Cartoon FX Pack\Source\Scripts\Particle.cs" />
     <Compile Include="Assets\Aura 2\Examples\Sources\Scripts\LightFlicker.cs" />
     <Compile Include="Assets\FlatKit\[Render Pipeline] Built-in\ImageEffects\Scripts\FogImageEffect.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\Cartoon FX Pack\Source\Scripts\Singleton.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\LMHPOLY\Low Poly Nature Bundle\_Bonus Assets\Scripts\SunControl.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Samples\Pinwheel Studio\Scripts\GRuntimeTexturePainter.cs" />
     <Compile Include="Assets\FlatKit\Demos\[Demo] Desert\Scripts\FloatingMotion.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\Aura 2\Examples\Sources\Scripts\MoveSinCos.cs" />
     <Compile Include="Assets\FlatKit\[Render Pipeline] Built-in\ImageEffects\Scripts\OutlineImageEffect.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\LMHPOLY\Low Poly Nature Bundle\_Bonus Assets\Scripts\FireLightControl.cs" />
     <Compile Include="Assets\Cartoon FX Pack\Source\Scripts\URandom.cs" />
+    <Compile Include="Assets\Mini First Person Controller\Scripts\Components\GroundCheck.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\Aura 2\Examples\Sources\Scripts\DebugFps.cs" />
     <Compile Include="Assets\Cartoon FX Pack\Source\Scripts\Objects.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\FlatKit\Demos\[Demo] Desert\Scripts\BillboardLineRendererCircle.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\Aura 2\Examples\Sources\Scripts\SinRotationOffset.cs" />
     <Compile Include="Assets\Cartoon FX Pack\Source\Scripts\CameraController.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Samples\Pinwheel Studio\Scripts\GTakeScreenshot.cs" />
+    <Compile Include="Assets\RotateToCam.cs" />
     <Compile Include="Assets\FlatKit\Demos\Common\Scripts\AutoLoadPipelineAsset.cs" />
     <Compile Include="Assets\Cartoon FX Pack\Demo\Scripts\UIManager.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Samples\Pinwheel Studio\Scripts\GCameraBuoyancyController.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\FlatKit\Demos\Common\Scripts\Motion\OrbitMotion.cs" />
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Samples\Pinwheel Studio\Scripts\GFpsCounter.cs" />
+    <Compile Include="Assets\Mini First Person Controller\Scripts\FirstPersonMovement.cs" />
     <Compile Include="Assets\Aura 2\Examples\Sources\Scripts\AuraFreeCamera.cs" />
     <Compile Include="Assets\Aura 2\Examples\Sources\Scripts\AutoMoveAndRotate.cs" />
     <Compile Include="Assets\Cartoon FX Pack\Source\Scripts\FontAsset.cs" />
     <Compile Include="Assets\Cartoon FX Pack\Source\Scripts\TextCreator.cs" />
+    <Compile Include="Assets\Mini First Person Controller\Scripts\Components\Jump.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\FlatKit\Demos\Common\Scripts\Motion\LinearMotion.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\Cartoon FX Pack\Source\Scripts\Creator.cs" />
     <Compile Include="Assets\FlatKit\Demos\Common\Scripts\Motion\CameraMouseOrbit.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\LMHPOLY\Low Poly Nature Bundle\_Bonus Assets\Scripts\CameraControl.cs" />
+    <Compile Include="Assets\Mini First Person Controller\Scripts\Components\Crouch.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+    <Compile Include="Assets\Michael&apos;s Scripts\SC_RigidbodyWalker.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
+    <Compile Include="Assets\Michael&apos;s Scripts\SC_PlanetGravity.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\FlatKit\Scripts\UvScroller.cs" />
+    <Compile Include="Assets\GameImageScript.cs" />
     <Compile Include="Assets\Cartoon FX Pack\Demo\Scripts\Navigator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
+    <Compile Include="Assets\Mini First Person Controller\Scripts\Components\Zoom.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\LMHPOLY\Low Poly Nature Bundle\_Bonus Assets\Scripts\CloudsControl.cs" />
+    <Compile Include="Assets\Michael&apos;s Scripts\MovementOnPlanet.cs" />
+    <Compile Include="Assets\Mini First Person Controller\Scripts\FirstPersonLook.cs" />
     <Compile Include="Assets\FlatKit\[Render Pipeline] URP\Water\Scripts\Buoyancy.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_BlinnPhong_4Splats.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\ErosionTool\ErosionTexturer.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\NoisePainter.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_Lambert_4Splats.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\MaskPainter.shader" />
@@ -109,6 +157,7 @@
     <None Include="Assets\FlatKit\Shaders\StylizedSurface\DustyroomTerrainSplatmapCommon.cginc" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\StampTool\StampToolCommon.cginc" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\SplatPainter.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\SplineTool\PathPainterSplat.shader" />
     <None Include="Assets\FlatKit\Shaders\StylizedSurface\LibraryUrp\TerrainLitPasses_DR.hlsl" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_BlinnPhong_GradientLookup.shader" />
@@ -117,15 +166,19 @@
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Utilities\CopyTexture.shader" />
     <None Include="Assets\FlatKit\Demos\[Demo] Desert\Shaders\CircleDecal.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\ElevationPainter.shader" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_PBR_VertexColor.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_BlinnPhong_ColorMap.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Samples\Pinwheel Studio\Shaders\ThunderParticles.cginc" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Utilities\UtilitiesCommon.cginc" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
     <None Include="Assets\FlatKit\Demos\[Demo] Desert\Shaders\Noise\ClassicNoise3D.hlsl" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Topographic\Topographic.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\FlatKit\Shaders\StylizedSurface\LibraryUrp\StylizedInput.hlsl" />
     <None Include="Assets\FlatKit\Shaders\GradientSkybox\GradientSkybox.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Utilities\InteractiveGrassVectorField.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\SplineTool\PathPainterMetallicSmoothness.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_Lambert_ColorMap.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Utilities\ChannelToGrayscale.shader" />
@@ -135,6 +188,7 @@
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Demo\Water.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Utilities\SolidColor.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\WarpFilter.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\SubDivPainter.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Foliage\GriffinBillboardCommon.cginc" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\LivePreview\GrassPreview.shader" />
@@ -157,28 +211,37 @@
     <None Include="Assets\FlatKit\Demos\[Demo] Desert\Shaders\DesertCloud.hlsl" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\SplineTool\SplineGizmos.shader" />
     <None Include="Assets\FlatKit\Shaders\StylizedSurface\StylizedSurfaceOutline.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\NoiseMapGenerator.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\StampTool\TextureStamperMask.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\SteepnessMapGenerator.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\RemapPainter.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Samples\Third Parties Notice.txt" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\CurveFilter.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Foliage\BuiltinRP_Grass.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\DistributionMapGenerator.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Foliage\BuiltinRP_GrassInteractive.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Utilities\UnlitChannelMask.shader" />
     <None Include="Assets\FlatKit\Demos\[Demo] Desert\Shaders\DesertPillar.hlsl" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\CGIncludes\GriffinSplatCommon.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_PBR_GradientLookup.shader" />
     <None Include="Assets\FlatKit\[Render Pipeline] Built-in\ImageEffects\Resources\FogPlus.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Utilities\HeightMapDecodeGrayscale.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\HeightMapFromMesh.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Utilities\SubDivisionVisualizer.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\LivePreview\VisibilityLivePreview2.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\ErosionTool\HydraullicErosion.compute" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Samples\Pinwheel Studio\Shaders\Thunder.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\BillboardTool\BillboardCreatorNormal.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_BlinnPhong_4Splats4Normals.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\LivePreview\Mask4Channels.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Foliage\BuiltinRP_GrassBillboard.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\LivePreview\SubdivLivePreview2.shader" />
@@ -198,6 +261,7 @@
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\MetallicPainter.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\VisibilityPainter.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_BlinnPhong_VertexColor.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\FlatKit\Demos\[Demo] Desert\Shaders\Noise\ClassicNoise2D.hlsl" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\ErosionTool\ErosionToolCommon.cginc" />
     <None Include="Assets\FlatKit\Shaders\StylizedSurface\StylizedSurfaceCutout.shader" />
@@ -205,12 +269,15 @@
     <None Include="Assets\FlatKit\Shaders\StylizedSurface\TerrainLitAdd_DR.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\StampTool\Stamper.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_PBR_ColorMap.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\ErosionTool\ErosionDataView.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_Lambert_GradientLookup.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\SplineTool\PathPainterAlbedo.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_PBR_8Splats.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\PainterCursor.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\LivePreview\MaskVisualizer.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\SplineTool\RampMaker.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\PaintTool\ConditionalPainting.cginc" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\TerrainNormalMapRenderer.shader" />
@@ -219,13 +286,16 @@
     <None Include="Assets\FlatKit\Shaders\StylizedSurface\StylizedSurface.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Utilities\SubDivisionMap.shader" />
     <None Include="Assets\FlatKit\Shaders\LightPlane.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\FlatKit\Shaders\StylizedSurface\Terrain.shader" />
     <None Include="Assets\LMHPOLY\Low Poly Nature Bundle\Trees\Demo\Asset _Scenes\_Info.txt" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\BuiltinRP\Terrain\BuiltinRP_Lambert_4Splats4Normals.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\TextureTool\StepFilter.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\Utilities\HeightmapConverterEncodeRG.shader" />
     <None Include="Assets\Samples\See-through Shader\1.8.6\See-through Shader Examples\Models\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\Samples\Polybrush\1.2.1\Shader Examples (Standard)\Shader\StandardTextureBlend.shader" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
     <None Include="Assets\FlatKit\[Render Pipeline] URP\Water\Shaders\Water.shader" />
     <None Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Runtime\Shaders\Internal\ErosionTool\FetchWorldData.shader" />
   </ItemGroup>
@@ -567,18 +637,6 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\PlaybackEngines\AppleTVSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\PlaybackEngines\VisionOSPlayer\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\PlaybackEngines\VisionOSPlayer\UnityEditor.iOS.Extensions.Common.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
       <Private>False</Private>
     </Reference>
@@ -596,10 +654,6 @@
     </Reference>
     <Reference Include="Unity.Android.GradleProject">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.GradleProject.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Data\PlaybackEngines\MacStandaloneSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">
@@ -1102,8 +1156,16 @@
       <HintPath>Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.2D.Common.Path.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Path.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Config.Runtime">
@@ -1118,12 +1180,12 @@
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.VisualEffectGraph.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualEffectGraph.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Flow">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
@@ -1146,12 +1208,20 @@
       <HintPath>Library\ScriptAssemblies\Unity.Formats.Fbx.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.2D.SpriteShape.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.Settings.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Settings.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="PPv2URPConverters">
       <HintPath>Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Toolchain.Win-x86_64-Linux-x86_64">
@@ -1202,12 +1272,12 @@
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.VisualScripting.Core.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.2D.Internal">
@@ -1218,12 +1288,20 @@
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.InternalAPIEngineBridge.001">
+      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Polybrush">
       <HintPath>Library\ScriptAssemblies\Unity.Polybrush.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.2D.Common.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Timeline">
@@ -1246,6 +1324,10 @@
       <HintPath>Library\ScriptAssemblies\Unity.SysrootPackage.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.InternalAPIEditorBridge.001">
+      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Autodesk.Fbx">
       <HintPath>Library\ScriptAssemblies\Autodesk.Fbx.dll</HintPath>
       <Private>False</Private>
@@ -1262,6 +1344,10 @@
       <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.2D.Common.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
       <Private>False</Private>
@@ -1270,16 +1356,20 @@
       <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.2D.SpriteShape.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="ShaderCrew.SeeThroughShader.Core.StackableForBetterShaders.Editor.csproj">
-      <Project>{2C3F2D67-DA4B-1498-DC35-45A4305BDA55}</Project>
-      <Name>ShaderCrew.SeeThroughShader.Core.StackableForBetterShaders.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Aura2_Editor.csproj">
       <Project>{46A3FE89-E69A-029C-15CE-94396CA71094}</Project>
       <Name>Aura2_Editor</Name>
