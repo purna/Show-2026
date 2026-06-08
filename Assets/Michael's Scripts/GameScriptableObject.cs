@@ -9,4 +9,5 @@ public class GameScriptableObject : ScriptableObject
     public Sprite GameImage;
     public string Author;
     public string GameName;
+    public string Link;
 }

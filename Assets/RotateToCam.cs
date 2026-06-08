@@ -4,9 +4,20 @@ using UnityEngine;
 
 public class RotateToCam : MonoBehaviour
 {
-    // Update is called once per frame
+    // LateUpdate prevents UI jittering by running after the camera moves
     void LateUpdate()
     {
-        gameObject.transform.LookAt(transform.position + Camera.main.transform.rotation * Vector3.forward, Camera.main.transform.rotation * Vector3.up);
+        if (Camera.main != null)
+        {
+            // 1. Get the camera's current rotation angles
+            Vector3 cameraEulerAngles = Camera.main.transform.eulerAngles;
+
+            // 2. Lock the X (tilt) and Z (roll) rotations to 0. 
+            // We only keep the Y angle so it rotates horizontally with the screen.
+            Quaternion targetHorizontalRotation = Quaternion.Euler(0f, cameraEulerAngles.y, 0f);
+
+            // 3. Apply the clean, upright rotation to the canvas
+            transform.rotation = targetHorizontalRotation;
+        }
     }
 }

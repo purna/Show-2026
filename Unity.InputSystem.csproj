@@ -48,6 +48,7 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.62f2/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Plugins/DualShock/DualShockGamepad.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Editor/Dialog.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Utilities/PrimitiveValue.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Editor/ControlPicker/InputControlDropdownItem.cs" />
@@ -61,12 +62,12 @@
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Devices/Commands/EnableIMECompositionCommand.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/IInputRuntime.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Plugins/Android/AndroidAxis.cs" />
-    <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Plugins/XR/Haptics/BufferedRumble.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Plugins/PlayerInput/PlayerInputEditor.cs" />
+    <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Plugins/XR/Haptics/BufferedRumble.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Plugins/PlayerInput/PlayerInputManagerEditor.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Controls/Processors/StickDeadzoneProcessor.cs" />
-    <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Actions/InputBinding.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Plugins/UI/MultiplayerEventSystem.cs" />
+    <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Actions/InputBinding.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Controls/QuaternionControl.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Plugins/HID/HIDParser.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Editor/Internal/InputStateWindow.cs" />
@@ -107,16 +108,16 @@
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Utilities/Comparers.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Plugins/Steam/SteamController.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Editor/Internal/SerializedPropertyLinqExtensions.cs" />
-    <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/State/IInputStateTypeInfo.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Actions/Interactions/PressInteraction.cs" />
+    <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/State/IInputStateTypeInfo.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Utilities/DynamicBitfield.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Controls/AnyKeyControl.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/State/InputStateBlock.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Editor/UITKAssetEditor/StateContainer.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Controls/Processors/InvertProcessor.cs" />
-    <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Editor/PropertyDrawers/InputActionReferenceSearchProviders.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Actions/Composites/OneModifierComposite.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Plugins/Linux/LinuxSupport.cs" />
+    <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Editor/PropertyDrawers/InputActionReferenceSearchProviders.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Utilities/DisplayStringFormatAttribute.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Controls/Processors/CompensateRotationProcessor.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Editor/Settings/InputSettingsProvider.cs" />
@@ -155,8 +156,8 @@
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Actions/Composites/AxisComposite.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Plugins/EnhancedTouch/Touch.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Editor/Debugger/InputDebuggerWindow.cs" />
-    <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Editor/UITKAssetEditor/Views/DropManipulator.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Plugins/PlayerInput/PlayerInputManager.cs" />
+    <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Editor/UITKAssetEditor/Views/DropManipulator.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Editor/Internal/AdvancedDropdown/AdvancedDropdownItem.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Controls/DiscreteButtonControl.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Utilities/ExceptionHelpers.cs" />
@@ -219,8 +220,8 @@
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/InputUpdateType.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Controls/Processors/InvertVector3Processor.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Controls/DpadControl.cs" />
-    <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Plugins/XInput/XboxGamepadMacOS.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Editor/AssetEditor/InputActionTreeView.cs" />
+    <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Plugins/XInput/XboxGamepadMacOS.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Plugins/Steam/SteamIGAConverter.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Editor/ProjectWideActions/ProjectWideActionsAsset.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Devices/InputDeviceChange.cs" />
@@ -344,8 +345,8 @@
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Controls/DeltaControl.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Plugins/UI/ExtendedSubmitCancelEventData.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Editor/PropertyDrawers/InputActionPropertyDrawer.cs" />
-    <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Devices/Sensor.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Editor/Analytics/InputBuildAnalytic.cs" />
+    <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Devices/Sensor.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Devices/Haptics/DualMotorRumbleCommand.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Editor/ControlPicker/InputControlPathEditor.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Actions/Composites/ButtonWithOneModifier.cs" />
@@ -374,8 +375,8 @@
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Plugins/XR/XRSupport.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Actions/InputBindingCompositeContext.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Editor/Internal/AdvancedDropdown/AdvancedDropdownDataSource.cs" />
-    <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Editor/InputParameterEditor.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Editor/Internal/InputControlTreeView.cs" />
+    <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Editor/InputParameterEditor.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Controls/TouchPressControl.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Plugins/WebGL/WebGLSupport.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Utilities/NumberHelpers.cs" />
@@ -387,8 +388,8 @@
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Devices/InputDevice.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Plugins/WebGL/WebGLGamepad.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Events/InputEventTrace.cs" />
-    <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/InputSystem.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Plugins/UI/ExtendedAxisEventData.cs" />
+    <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/InputSystem.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Actions/InputActionTrace.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Events/IInputEventTypeInfo.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Controls/TouchPhaseControl.cs" />
@@ -448,7 +449,6 @@
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Controls/Processors/NormalizeVector2Processor.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Devices/Remote/InputRemoting.cs" />
     <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Editor/Analytics/InputActionsEditorSessionAnalytic.cs" />
-    <Compile Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Plugins/DualShock/DualShockGamepad.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library/PackageCache/com.unity.inputsystem@1.18.0/InputSystem/Editor/UITKAssetEditor/PackageResources/ControlSchemeEditor.uxml" />
@@ -806,6 +806,18 @@
       <HintPath>/Applications/Unity/Hub/Editor/2022.3.62f2/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.VisualScripting.YamlDotNet">
+      <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.9/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Plastic.Antlr3.Runtime">
+      <HintPath>Library/PackageCache/com.unity.collab-proxy@2.11.3/Lib/Editor/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Plastic.Newtonsoft.Json">
+      <HintPath>Library/PackageCache/com.unity.collab-proxy@2.11.3/Lib/Editor/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="log4netPlastic">
       <HintPath>Library/PackageCache/com.unity.collab-proxy@2.11.3/Lib/Editor/log4netPlastic.dll</HintPath>
       <Private>False</Private>
@@ -814,28 +826,16 @@
       <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.9/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VisualScripting.YamlDotNet">
-      <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.9/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.TextureAssets">
-      <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.9/Editor/VisualScripting.Core/EditorAssetResources/Unity.VisualScripting.TextureAssets.dll</HintPath>
+    <Reference Include="unityplastic">
+      <HintPath>Library/PackageCache/com.unity.collab-proxy@2.11.3/Lib/Editor/unityplastic.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.9/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Plastic.Antlr3.Runtime">
-      <HintPath>Library/PackageCache/com.unity.collab-proxy@2.11.3/Lib/Editor/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="unityplastic">
-      <HintPath>Library/PackageCache/com.unity.collab-proxy@2.11.3/Lib/Editor/unityplastic.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Plastic.Newtonsoft.Json">
-      <HintPath>Library/PackageCache/com.unity.collab-proxy@2.11.3/Lib/Editor/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Unity.VisualScripting.TextureAssets">
+      <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.9/Editor/VisualScripting.Core/EditorAssetResources/Unity.VisualScripting.TextureAssets.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
