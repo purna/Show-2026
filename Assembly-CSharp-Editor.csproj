@@ -49,12 +49,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/FlatKit/Shaders/GradientSkybox/Editor/GradientSkyboxEditor.cs" />
+    <Compile Include="Assets/RealBlend/Editor/VertexPainter_SculptTab.cs" />
+    <Compile Include="Assets/RealBlend/Editor/VertexPainter_PaintTab.cs" />
+    <Compile Include="Assets/RealBlend/Editor/VertexPainter_ExtraTabs.cs" />
+    <Compile Include="Assets/RealBlend/Editor/MaskPacker.cs" />
     <Compile Include="Assets/FlatKit/[Render Pipeline] URP/Water/Editor/Tooltips.cs" />
+    <Compile Include="Assets/RealBlend/Editor/RealBlendBoxCreateMode.cs" />
+    <Compile Include="Assets/RealBlend/Editor/RealBlendWallCreateMode.cs" />
     <Compile Include="Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Shaders/GGetWorldToNormalizedMatrixNode.cs" />
     <Compile Include="Assets/FlatKit/Shaders/Editor/Tooltips.cs" />
+    <Compile Include="Assets/RealBlend/Editor/VertexPaintStorageEditor.cs" />
+    <Compile Include="Assets/RealBlend/Editor/RealBlendCreationCore.cs" />
     <Compile Include="Assets/FlatKit/Shaders/Editor/StylizedSurfaceEditor.cs" />
+    <Compile Include="Assets/RealBlend/Editor/RealBlendFloorCreateMode.cs" />
+    <Compile Include="Assets/RealBlend/Editor/RealBlendCurvedWallCreateMode.cs" />
+    <Compile Include="Assets/RealBlend/Editor/RealBlendSplineCreateMode.cs" />
     <Compile Include="Assets/FlatKit/[Render Pipeline] URP/Water/Editor/WaterEditor.cs" />
+    <Compile Include="Assets/RealBlend/Editor/RealBlend.cs" />
     <Compile Include="Assets/FlatKit/Shaders/Editor/ObjectOutlineEditorUtils.cs" />
+    <Compile Include="Assets/RealBlend/Editor/VertexPainterNoiseModule.cs" />
     <Compile Include="Assets/FlatKit/Shaders/Editor/TerrainEditor.cs" />
     <Compile Include="Assets/FlatKit/Demos/Common/Scripts/Motion/Editor/LinearMotionEditor.cs" />
   </ItemGroup>
@@ -1063,6 +1076,7 @@
     <ProjectReference Include="Unity.VisualEffectGraph.Editor.csproj" />
     <ProjectReference Include="Unity.VisualScripting.Flow.csproj" />
     <ProjectReference Include="Unity.Mathematics.Editor.csproj" />
+    <ProjectReference Include="Unity.Splines.Editor.csproj" />
     <ProjectReference Include="Unity.Polybrush.Editor.csproj" />
     <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj" />
     <ProjectReference Include="Unity.PlasticSCM.Editor.csproj" />
@@ -1112,6 +1126,7 @@
     <ProjectReference Include="Autodesk.Fbx.Editor.csproj" />
     <ProjectReference Include="Unity.Mathematics.csproj" />
     <ProjectReference Include="Unity.2D.Common.Editor.csproj" />
+    <ProjectReference Include="Unity.Splines.csproj" />
     <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.csproj" />
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj" />
     <ProjectReference Include="Unity.Searcher.Editor.csproj" />

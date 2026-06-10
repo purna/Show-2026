@@ -67,6 +67,7 @@
     <Compile Include="Assets/Mini First Person Controller/Scripts/Components/GroundCheck.cs" />
     <Compile Include="Assets/coverflow/Scripts/UI/CollectionView/CollectionViewCell/iCollectionViewCell.cs" />
     <Compile Include="Assets/Aura 2/Examples/Sources/Scripts/DebugFps.cs" />
+    <Compile Include="Assets/RealBlend/Scripts/RealBlendExperimentalSPOMBounds.cs" />
     <Compile Include="Assets/Cartoon FX Pack/Source/Scripts/Objects.cs" />
     <Compile Include="Assets/FlatKit/Demos/[Demo] Desert/Scripts/BillboardLineRendererCircle.cs" />
     <Compile Include="Assets/coverflow/Scripts/BringWindowtoFront.cs" />
@@ -96,6 +97,7 @@
     <Compile Include="Assets/coverflow/Scripts/Quit.cs" />
     <Compile Include="Assets/Mini First Person Controller/Scripts/Components/Jump.cs" />
     <Compile Include="Assets/FlatKit/Demos/Common/Scripts/Motion/LinearMotion.cs" />
+    <Compile Include="Assets/RealBlend/Scripts/VertexPaintStorage.cs" />
     <Compile Include="Assets/Cartoon FX Pack/Source/Scripts/Creator.cs" />
     <Compile Include="Assets/FlatKit/Demos/Common/Scripts/Motion/CameraMouseOrbit.cs" />
     <Compile Include="Assets/coverflow/Scripts/UI/CollectionView/CollectionViewLayout/CoverFlowLayout.cs" />
@@ -189,8 +191,10 @@
     <None Include="Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Shaders/BuiltinRP/Terrain/BuiltinRP_Lambert_VertexColor.shader" />
     <None Include="Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Shaders/Internal/TextureTool/TextureToolCommon.cginc" />
     <None Include="Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Shaders/Internal/PaintTool/AlbedoPainter.shader" />
+    <None Include="Assets/RealBlend/Art/Shaders/RealBlendExperimentalSPOM.hlsl" />
     <None Include="Assets/FlatKit/Demos/[Demo] Desert/Shaders/DesertCloud.hlsl" />
     <None Include="Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Shaders/Internal/SplineTool/SplineGizmos.shader" />
+    <None Include="Assets/RealBlend/Art/Shaders/VertexColorPreview.shader" />
     <None Include="Assets/FlatKit/Shaders/StylizedSurface/StylizedSurfaceOutline.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
     <None Include="Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Shaders/Internal/TextureTool/NoiseMapGenerator.shader" />
@@ -236,9 +240,12 @@
     <None Include="Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Shaders/Internal/TextureTool/BlurRadius.shader" />
     <None Include="Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Shaders/Internal/SplineTool/SplineToolCommon.cginc" />
     <None Include="Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Shaders/BuiltinRP/Terrain/BuiltinRP_BlinnPhong_8Splats.shader" />
+    <None Include="Assets/RealBlend/Art/Shaders/PolybrushMixer5.cginc" />
+    <None Include="Assets/RealBlend/Art/Shaders/PolybrushMixer.cginc" />
     <None Include="Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Shaders/Internal/BillboardTool/BillboardCreatorAtlas.shader" />
     <None Include="Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Shaders/Internal/Utilities/GeometricalHeightmapRenderer.shader" />
     <None Include="Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Shaders/Internal/LivePreview/Wireframe.shader" />
+    <None Include="Assets/RealBlend/Art/Shaders/RealBlendBuiltInVariation.shader" />
     <None Include="Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Shaders/Internal/TextureTool/BlendMapGenerator.shader" />
     <None Include="Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Shaders/Internal/PaintTool/MetallicPainter.shader" />
     <None Include="Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Shaders/Internal/PaintTool/VisibilityPainter.shader" />
@@ -1125,6 +1132,7 @@
     <ProjectReference Include="Unity.VisualEffectGraph.Editor.csproj" />
     <ProjectReference Include="Unity.VisualScripting.Flow.csproj" />
     <ProjectReference Include="Unity.Mathematics.Editor.csproj" />
+    <ProjectReference Include="Unity.Splines.Editor.csproj" />
     <ProjectReference Include="Unity.Polybrush.Editor.csproj" />
     <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj" />
     <ProjectReference Include="Unity.PlasticSCM.Editor.csproj" />
@@ -1174,6 +1182,7 @@
     <ProjectReference Include="Autodesk.Fbx.Editor.csproj" />
     <ProjectReference Include="Unity.Mathematics.csproj" />
     <ProjectReference Include="Unity.2D.Common.Editor.csproj" />
+    <ProjectReference Include="Unity.Splines.csproj" />
     <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.csproj" />
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj" />
     <ProjectReference Include="Unity.Searcher.Editor.csproj" />

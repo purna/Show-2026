@@ -129,3 +129,11 @@ Update Mode: mergeDefaultDependencies
 
 The following packages were added:
   com.unity.visualeffectgraph@14.0.12
+
+=== Tue Jun  9 09:06:24 2026
+
+Packages were changed.
+Update Mode: mergeDefaultDependencies
+
+The following packages were added:
+  com.unity.splines@2.8.2
