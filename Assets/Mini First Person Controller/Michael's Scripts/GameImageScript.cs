@@ -1,39 +1,56 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class GameImageScript : MonoBehaviour
 {
+    [Header("Game Data")]
     public GameScriptableObject Game;
-    
-    private TextMeshProUGUI TheText; 
-    private Image TheImage;
 
-    void Start()
+    [Header("UI References")]
+    [SerializeField] private TextMeshProUGUI gameText;
+    [SerializeField] private Image gameImage;
+    [SerializeField] private Button playButton;
+
+    private void Start()
     {
-        // ✔️ FIXED: No more transform.GetChild() index breaking.
-        // It reads directly from its own children.
-        TheText = GetComponentInChildren<TextMeshProUGUI>();
-        TheImage = GetComponentInChildren<Image>();
+        UpdateUI();
 
-        if (Game != null)
+        if (playButton != null)
         {
-            if (TheImage != null)
-            {
-                TheImage.sprite = Game.GameImage;
-            }
-
-            if (TheText != null)
-            {
-                TheText.text = Game.GameName + "<br> " + "Made by " + Game.Author;
-            }
+            playButton.onClick.RemoveAllListeners();
+            playButton.onClick.AddListener(OpenGameLink);
         }
-        else
+    }
+
+    private void UpdateUI()
+    {
+        if (Game == null)
         {
             Debug.LogWarning($"GameScriptableObject asset is missing on {gameObject.name}!", gameObject);
+            return;
         }
+
+        if (gameImage != null)
+        {
+            gameImage.sprite = Game.GameImage;
+        }
+
+        if (gameText != null)
+        {
+            gameText.text = $"{Game.GameName}\nMade by {Game.Author}";
+        }
+    }
+
+    public void OpenGameLink()
+    {
+        if (Game == null || string.IsNullOrWhiteSpace(Game.Link))
+        {
+            Debug.LogWarning("No game link assigned.");
+            return;
+        }
+
+        Application.OpenURL(Game.Link);
     }
 
     public void LoadGame()
@@ -43,4 +60,5 @@ public class GameImageScript : MonoBehaviour
             Debug.Log(Game.GameName + " Should be loading");
         }
     }
+
 }

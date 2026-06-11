@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class ShowCanvasOnProximity : MonoBehaviour
@@ -9,28 +10,37 @@ public class ShowCanvasOnProximity : MonoBehaviour
     [Tooltip("The Cylinder child object (used for visual radius).")]
     public GameObject cylinderObstacle;
 
-    // ✔️ ADDED: Reference to handle opacity controls
     private CanvasGroup canvasGroup;
 
     [Header("Settings")]
     [Tooltip("The tag of your player character.")]
     public string playerTag = "Player";
 
-    /// <summary>
-    /// This runs automatically when you attach the script or click "Reset" in the Inspector.
-    /// It automatically finds the child Canvas and Cylinder objects.
-    /// </summary>
+    [Tooltip("Time to fade in/out.")]
+    public float fadeDuration = 0.5f;
+
+    [Tooltip("How long after leaving before fading out.")]
+    public float exitDelay = 5f;
+
+    // Track the currently active trigger globally
+    private static ShowCanvasOnProximity activeTrigger;
+
+    private Coroutine hideCoroutine;
+    private Coroutine fadeCoroutine;
+
+    private SC_RigidbodyWalker playerController;
+
     void Reset()
     {
-        // Find the Canvas component in children and get its GameObject
         Canvas canvasComponent = GetComponentInChildren<Canvas>(true);
+
         if (canvasComponent != null)
         {
             worldCanvas = canvasComponent.gameObject;
         }
 
-        // Find the Cylinder by searching for a child with a CapsuleCollider or MeshFilter named cylinder
         MeshFilter[] meshes = GetComponentsInChildren<MeshFilter>(true);
+
         foreach (var mesh in meshes)
         {
             if (mesh.name.ToLower().Contains("cylinder"))
@@ -43,78 +53,159 @@ public class ShowCanvasOnProximity : MonoBehaviour
 
     void Start()
     {
-        // Double-check components if Reset wasn't triggered
-        if (worldCanvas == null) Reset();
+        playerController = FindFirstObjectByType<SC_RigidbodyWalker>();
+
+        if (worldCanvas == null)
+            Reset();
 
         if (worldCanvas != null)
         {
-            // ✔️ FIXED: Ensure the GameObject itself stays Active so it can update its rotation/scripts
             worldCanvas.SetActive(true);
 
-            // ✔️ ADDED: Get the CanvasGroup or add one if it's missing from the canvas
             canvasGroup = worldCanvas.GetComponent<CanvasGroup>();
+
             if (canvasGroup == null)
             {
                 canvasGroup = worldCanvas.AddComponent<CanvasGroup>();
             }
 
-            // ✔️ FIXED: Initialize as completely invisible and non-interactive
-            SetCanvasGroupState(false);
+            canvasGroup.alpha = 0f;
+            canvasGroup.interactable = false;
+            canvasGroup.blocksRaycasts = false;
         }
     }
 
     void LateUpdate()
     {
-        // ✔️ FIXED: Check alpha instead of activeSelf so it rotates while faded in
-        if (worldCanvas != null && canvasGroup != null && canvasGroup.alpha > 0f)
+        if (worldCanvas == null || canvasGroup == null)
+            return;
+
+        if (canvasGroup.alpha > 0f && Camera.main != null)
         {
-            if (Camera.main != null)
-            {
-                // Rotates the canvas horizontally so it perfectly faces the main camera
-                Vector3 cameraEulerAngles = Camera.main.transform.eulerAngles;
-                Quaternion targetHorizontalRotation = Quaternion.Euler(0f, cameraEulerAngles.y, 0f);
-                worldCanvas.transform.rotation = targetHorizontalRotation;
-            }
+            Vector3 cameraEulerAngles = Camera.main.transform.eulerAngles;
+
+            worldCanvas.transform.rotation =
+                Quaternion.Euler(0f, cameraEulerAngles.y, 0f);
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        // ✔️ ADDED: General trigger debug log to see if ANYTHING is hitting it
-        Debug.Log($"[Trigger Enter] Something entered the zone: '{other.name}' with tag '{other.tag}'", other.gameObject);
+        if (!other.CompareTag(playerTag))
+            return;
 
-        // Check if the specific object entering the trigger radius is the player
-        if (other.CompareTag(playerTag))
+        Debug.Log($"Player entered trigger: {name}");
+
+        // Cancel any pending hide
+        if (hideCoroutine != null)
         {
-            // ✔️ ADDED: Specific validation debug log
-            Debug.Log($"SUCCESS: Player '{other.name}' has entered the zone! Fading Canvas in.", gameObject);
-            
-            SetCanvasGroupState(true);
+            StopCoroutine(hideCoroutine);
+            hideCoroutine = null;
         }
+
+        // If another trigger is active, hide it immediately
+        if (activeTrigger != null && activeTrigger != this)
+        {
+            activeTrigger.HideImmediately();
+        }
+
+        activeTrigger = this;
+
+        Show();
     }
 
     private void OnTriggerExit(Collider other)
     {
-        // Check if the object leaving the trigger radius is the player
-        if (other.CompareTag(playerTag))
+        if (!other.CompareTag(playerTag))
+            return;
+
+        Debug.Log($"Player exited trigger: {name}");
+
+        if (hideCoroutine != null)
         {
-            // ✔️ ADDED: Specific validation debug log
-            Debug.Log($"SUCCESS: Player '{other.name}' has exited the zone! Fading Canvas out.", gameObject);
-            
-            SetCanvasGroupState(false);
+            StopCoroutine(hideCoroutine);
+        }
+
+        hideCoroutine = StartCoroutine(HideAfterDelay());
+    }
+
+    private IEnumerator HideAfterDelay()
+    {
+        yield return new WaitForSeconds(exitDelay);
+
+        yield return FadeCanvas(0f);
+
+        if (activeTrigger == this)
+        {
+            activeTrigger = null;
         }
     }
 
-    /// <summary>
-    /// Helper method to change opacity and UI click interactivity instantly.
-    /// </summary>
-    private void SetCanvasGroupState(bool isVisible)
+    private void Show()
     {
-        if (canvasGroup != null)
+        if (playerController != null)
         {
-            canvasGroup.alpha = isVisible ? 1f : 0f;
-            canvasGroup.interactable = isVisible;
-            canvasGroup.blocksRaycasts = isVisible;
+            playerController.DisableMouseLook();
+        }
+
+        if (fadeCoroutine != null)
+        {
+            StopCoroutine(fadeCoroutine);
+        }
+
+        fadeCoroutine = StartCoroutine(FadeCanvas(1f));
+    }
+
+    private void HideImmediately()
+    {
+        if (hideCoroutine != null)
+        {
+            StopCoroutine(hideCoroutine);
+            hideCoroutine = null;
+        }
+
+        if (fadeCoroutine != null)
+        {
+            StopCoroutine(fadeCoroutine);
+            fadeCoroutine = null;
+        }
+
+        canvasGroup.alpha = 0f;
+        canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = false;
+    }
+
+    private IEnumerator FadeCanvas(float targetAlpha)
+    {
+        float startAlpha = canvasGroup.alpha;
+        float elapsed = 0f;
+
+        if (targetAlpha > 0f)
+        {
+            canvasGroup.interactable = true;
+            canvasGroup.blocksRaycasts = true;
+        }
+
+        while (elapsed < fadeDuration)
+        {
+            elapsed += Time.deltaTime;
+
+            float t = Mathf.Clamp01(elapsed / fadeDuration);
+
+            // Smooth Ease In-Out
+            t = t * t * (3f - 2f * t);
+
+            canvasGroup.alpha = Mathf.Lerp(startAlpha, targetAlpha, t);
+
+            yield return null;
+        }
+
+        canvasGroup.alpha = targetAlpha;
+
+        if (targetAlpha <= 0f)
+        {
+            canvasGroup.interactable = false;
+            canvasGroup.blocksRaycasts = false;
         }
     }
 }

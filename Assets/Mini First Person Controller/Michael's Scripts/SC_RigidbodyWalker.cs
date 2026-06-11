@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,6 +23,9 @@ public class SC_RigidbodyWalker : MonoBehaviour
     private Rigidbody r;
     private Vector2 rotation = Vector2.zero;
 
+
+    private bool allowLook = true;
+
     void Awake()
     {
         r = GetComponent<Rigidbody>();
@@ -41,7 +44,7 @@ public class SC_RigidbodyWalker : MonoBehaviour
         // -------------------------------------------------------------------
         // 1. GATHER LOOK / TURN INPUT (Mouse + Keyboard Only - NO JOYSTICKS)
         // -------------------------------------------------------------------
-        
+
         // Mouse Input
         float mouseLookX = Input.GetAxis("Mouse X") * lookSpeed;
         float mouseLookY = -Input.GetAxis("Mouse Y") * lookSpeed;
@@ -83,14 +86,14 @@ public class SC_RigidbodyWalker : MonoBehaviour
     {
         // Calculate forward direction relative to the camera orientation
         Vector3 forwardDir = Vector3.Cross(transform.up, -playerCamera.transform.right).normalized;
-        
+
         // Forward/backward movement via Vertical axis (W/S or Up/Down arrows)
         Vector3 targetVelocity = (forwardDir * Input.GetAxis("Vertical")) * speed;
 
         // ✔️ PLANET SAFE: Maintain velocity relative to the player's local upright orientation
         Vector3 velocity = r.velocity;
         Vector3 velocityChange = targetVelocity - Vector3.ProjectOnPlane(velocity, transform.up);
-        
+
         // Clamp the velocity change so the movement stays predictable
         velocityChange = Vector3.ClampMagnitude(velocityChange, maxVelocityChange);
 
@@ -112,5 +115,21 @@ public class SC_RigidbodyWalker : MonoBehaviour
     void OnCollisionStay()
     {
         grounded = true;
+    }
+
+    public void DisableMouseLook()
+    {
+        allowLook = false;
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    public void EnableMouseLook()
+    {
+        allowLook = true;
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }

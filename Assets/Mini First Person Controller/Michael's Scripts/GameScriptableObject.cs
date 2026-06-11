@@ -9,5 +9,6 @@ public class GameScriptableObject : ScriptableObject
     public Sprite GameImage;
     public string Author;
     public string GameName;
+    [Tooltip("URL to open when Play button is clicked")]
     public string Link;
 }
