@@ -819,7 +819,7 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Standalone: GRIFFIN_EDITOR_COROUTINES;GRIFFIN;GRIFFIN_2021;AURA_IN_SCENEVIEW;AURA_IN_PROJECT
+    Standalone: GRIFFIN_EDITOR_COROUTINES;GRIFFIN;GRIFFIN_2021;AURA_IN_PROJECT
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
