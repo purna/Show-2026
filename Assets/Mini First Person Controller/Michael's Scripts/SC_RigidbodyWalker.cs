@@ -3,27 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-[RequireComponent(typeof(SphereCollider))]
-
 public class SC_RigidbodyWalker : MonoBehaviour
 {
-    [Header("Movement Settings")]
-    public float speed = 15.0f;
+    [Header("Movement")]
+    public float speed = 15f;
     public bool canJump = true;
-    public float jumpHeight = 2.0f;
-    private float maxVelocityChange = 10.0f;
+    public float jumpHeight = 2f;
+    private float maxVelocityChange = 10f;
 
-    [Header("Camera & Rotation Settings")]
-    public Camera playerCamera;
-    public float lookSpeed = 2.0f;             // Sensitivity for Mouse
-    public float keyboardTurnSpeed = 120.0f;   // Sensitivity for keyboard Arrow/AD turning
-    public float lookXLimit = 60.0f;
+    [Header("Camera")]
+    public Transform cameraPivot;
+    public float lookSpeed = 2f;
+    public float keyboardTurnSpeed = 120f;
+    public float lookLimit = 45f;
 
-    private bool grounded = false;
     private Rigidbody r;
-    private Vector2 rotation = Vector2.zero;
 
+    private float pitch;
+    private float yaw;
 
+    private bool grounded;
     private bool allowLook = true;
 
     void Awake()
@@ -31,82 +30,84 @@ public class SC_RigidbodyWalker : MonoBehaviour
         r = GetComponent<Rigidbody>();
         r.freezeRotation = true;
         r.useGravity = false;
-        r.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
-        rotation.y = transform.eulerAngles.y;
 
-        // Lock cursor for desktop play
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        yaw = transform.eulerAngles.y;
     }
 
     void Update()
     {
-        // -------------------------------------------------------------------
-        // 1. GATHER LOOK / TURN INPUT (Mouse + Keyboard Only - NO JOYSTICKS)
-        // -------------------------------------------------------------------
+        if (!allowLook || cameraPivot == null) return;
 
-        // Mouse Input
-        float mouseLookX = Input.GetAxis("Mouse X") * lookSpeed;
-        float mouseLookY = -Input.GetAxis("Mouse Y") * lookSpeed;
+        Vector3 up = transform.up;
 
-        // Keyboard Turning (Left/Right Arrow keys or A/D map to "Horizontal" by default)
-        float keyboardTurnX = Input.GetAxis("Horizontal") * keyboardTurnSpeed * Time.deltaTime;
+        // Mouse input
+        float mouseX = Input.GetAxis("Mouse X") * lookSpeed;
+        float mouseY = -Input.GetAxis("Mouse Y") * lookSpeed;
 
-        // Combine inputs for looking left/right
-        float totalLookX = mouseLookX + keyboardTurnX;
-        float totalLookY = mouseLookY;
+        // Keyboard rotation (planet-relative)
+        float turn = 0f;
 
-        // -------------------------------------------------------------------
-        // 2. APPLY ROTATION
-        // -------------------------------------------------------------------
+        if (Input.GetKey(KeyCode.LeftArrow))
+            turn -= keyboardTurnSpeed * Time.deltaTime;
 
-        // Vertical Look (Pitch)
-        rotation.x += totalLookY;
-        rotation.x = Mathf.Clamp(rotation.x, -lookXLimit, lookXLimit);
-        playerCamera.transform.localRotation = Quaternion.Euler(rotation.x, 0, 0);
+        if (Input.GetKey(KeyCode.RightArrow))
+            turn += keyboardTurnSpeed * Time.deltaTime;
 
-        // Horizontal Look (Yaw) - Turning on the spot
-        Quaternion localRotation = Quaternion.Euler(0f, totalLookX, 0f);
-        transform.rotation = transform.rotation * localRotation;
-    }
+        transform.Rotate(up, turn, Space.World);
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Game"))
-        {
-            GameImageScript gameScript = other.GetComponentInChildren<GameImageScript>();
-            if (gameScript != null)
-            {
-                gameScript.LoadGame();
-            }
-        }
+        // Camera rotation
+        yaw += mouseX;
+        pitch += mouseY;
+
+        pitch = Mathf.Clamp(pitch, -lookLimit, lookLimit);
+        yaw = Mathf.Clamp(yaw, -lookLimit, lookLimit);
+
+        // Build stable camera basis using planet up
+        Quaternion yawRot = Quaternion.AngleAxis(yaw, up);
+
+        Vector3 forward = yawRot * transform.forward;
+        forward = Vector3.ProjectOnPlane(forward, up).normalized;
+
+        Vector3 right = Vector3.Cross(up, forward);
+
+        Quaternion lookRot = Quaternion.LookRotation(forward, up);
+        Quaternion pitchRot = Quaternion.AngleAxis(pitch, right);
+
+        cameraPivot.rotation = lookRot * pitchRot;
     }
 
     void FixedUpdate()
     {
-        // Calculate forward direction relative to the camera orientation
-        Vector3 forwardDir = Vector3.Cross(transform.up, -playerCamera.transform.right).normalized;
+        if (cameraPivot == null) return;
 
-        // Forward/backward movement via Vertical axis (W/S or Up/Down arrows)
-        Vector3 targetVelocity = (forwardDir * Input.GetAxis("Vertical")) * speed;
+        Vector3 up = transform.up;
 
-        // ✔️ PLANET SAFE: Maintain velocity relative to the player's local upright orientation
+        Vector3 forward =
+            Vector3.ProjectOnPlane(transform.forward, up).normalized;
+
+        Vector3 right =
+            Vector3.ProjectOnPlane(transform.right, up).normalized;
+
+        Vector3 move =
+            (forward * Input.GetAxis("Vertical") +
+             right * Input.GetAxis("Horizontal")) * speed;
+
         Vector3 velocity = r.velocity;
-        Vector3 velocityChange = targetVelocity - Vector3.ProjectOnPlane(velocity, transform.up);
 
-        // Clamp the velocity change so the movement stays predictable
-        velocityChange = Vector3.ClampMagnitude(velocityChange, maxVelocityChange);
+        Vector3 velocityChange =
+            move - Vector3.ProjectOnPlane(velocity, up);
 
-        // Apply the force
+        velocityChange =
+            Vector3.ClampMagnitude(velocityChange, maxVelocityChange);
+
         r.AddForce(velocityChange, ForceMode.VelocityChange);
 
-        if (grounded)
+        if (grounded && canJump && Input.GetButton("Jump"))
         {
-            if (Input.GetButton("Jump") && canJump)
-            {
-                // Jump upward relative to the planet's surface
-                r.AddForce(transform.up * jumpHeight, ForceMode.VelocityChange);
-            }
+            r.AddForce(up * jumpHeight, ForceMode.VelocityChange);
         }
 
         grounded = false;
@@ -120,7 +121,6 @@ public class SC_RigidbodyWalker : MonoBehaviour
     public void DisableMouseLook()
     {
         allowLook = false;
-
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
@@ -128,7 +128,6 @@ public class SC_RigidbodyWalker : MonoBehaviour
     public void EnableMouseLook()
     {
         allowLook = true;
-
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
