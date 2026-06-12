@@ -129,3 +129,11 @@ Update Mode: mergeDefaultDependencies
 
 The following packages were added:
   com.unity.visualeffectgraph@14.0.12
+
+=== Fri Jun 12 12:07:46 2026
+
+Packages were changed.
+Update Mode: mergeDefaultDependencies
+
+The following packages were added:
+  com.unity.postprocessing@3.4.0

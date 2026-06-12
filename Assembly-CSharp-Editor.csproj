@@ -62,9 +62,9 @@
   <ItemGroup>
     <Compile Include="Assets\FlatKit\Shaders\GradientSkybox\Editor\GradientSkyboxEditor.cs" />
     <Compile Include="Assets\FlatKit\[Render Pipeline] URP\Water\Editor\Tooltips.cs" />
-    <Compile Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Editor\Shaders\GGetWorldToNormalizedMatrixNode.cs" />
     <Compile Include="Assets\FlatKit\Shaders\Editor\Tooltips.cs" />
     <Compile Include="Assets\FlatKit\Shaders\Editor\StylizedSurfaceEditor.cs" />
+    <Compile Include="Assets\LMHPOLY\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Editor\Shaders\GGetWorldToNormalizedMatrixNode.cs" />
     <Compile Include="Assets\LMHPOLY\LowPolyWater_Pack\Scripts\Editor\GeneratePlane.cs" />
     <Compile Include="Assets\FlatKit\[Render Pipeline] URP\Water\Editor\WaterEditor.cs" />
     <Compile Include="Assets\FlatKit\Shaders\Editor\ObjectOutlineEditorUtils.cs" />
@@ -1274,6 +1274,10 @@
       <Project>{2C3F2D67-DA4B-1498-DC35-45A4305BDA55}</Project>
       <Name>ShaderCrew.SeeThroughShader.Core.StackableForBetterShaders.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Pinwheel.Polaris.Editor.csproj">
+      <Project>{8E01A4C1-CF86-E32C-54A0-851B9063343E}</Project>
+      <Name>Pinwheel.Polaris.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Aura2_Editor.csproj">
       <Project>{46A3FE89-E69A-029C-15CE-94396CA71094}</Project>
       <Name>Aura2_Editor</Name>
@@ -1281,10 +1285,6 @@
     <ProjectReference Include="FlatKit.Utils.Editor.csproj">
       <Project>{9313B9C8-0817-D3A8-7593-4C2AC9805705}</Project>
       <Name>FlatKit.Utils.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Pinwheel.Polaris.Runtime.csproj">
-      <Project>{3C65BF9C-AE99-795E-EE11-E2147ECD9E0A}</Project>
-      <Name>Pinwheel.Polaris.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="ShaderCrew.SeeThroughShader.Core.Runtime.csproj">
       <Project>{B885F8F4-482D-D1F8-E32D-7F0D0F0A3D6D}</Project>
@@ -1306,13 +1306,13 @@
       <Project>{FA4A903C-0E97-1B58-7AA3-08D119276771}</Project>
       <Name>ExternAttributes.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Pinwheel.Polaris.Editor.csproj">
-      <Project>{8E01A4C1-CF86-E32C-54A0-851B9063343E}</Project>
-      <Name>Pinwheel.Polaris.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="ShaderCrew.SeeThroughShader.Core.Editor.csproj">
       <Project>{52ABBB42-61EF-3302-A1CC-91B4151F8BB4}</Project>
       <Name>ShaderCrew.SeeThroughShader.Core.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Pinwheel.Polaris.Runtime.csproj">
+      <Project>{3C65BF9C-AE99-795E-EE11-E2147ECD9E0A}</Project>
+      <Name>Pinwheel.Polaris.Runtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
