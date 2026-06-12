@@ -65,6 +65,7 @@
     <Compile Include="Assets\Polaris - Low Poly Ecosystem\Polaris - Low Poly Terrain Engine\Editor\Shaders\GGetWorldToNormalizedMatrixNode.cs" />
     <Compile Include="Assets\FlatKit\Shaders\Editor\Tooltips.cs" />
     <Compile Include="Assets\FlatKit\Shaders\Editor\StylizedSurfaceEditor.cs" />
+    <Compile Include="Assets\LMHPOLY\LowPolyWater_Pack\Scripts\Editor\GeneratePlane.cs" />
     <Compile Include="Assets\FlatKit\[Render Pipeline] URP\Water\Editor\WaterEditor.cs" />
     <Compile Include="Assets\FlatKit\Shaders\Editor\ObjectOutlineEditorUtils.cs" />
     <Compile Include="Assets\FlatKit\Shaders\Editor\TerrainEditor.cs" />

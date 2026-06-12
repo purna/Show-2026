@@ -33,16 +33,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   mode:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   quality:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   intensity:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 0.081
   clamp:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.05
 --- !u!114 &-1232996868896760612
 MonoBehaviour:
@@ -124,7 +124,7 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.038
+    m_Value: 0.159
 --- !u!114 &8259189813479180138
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -143,7 +143,7 @@ MonoBehaviour:
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.063
+    m_Value: 0.803
   response:
     m_OverrideState: 1
     m_Value: 0.8
@@ -171,7 +171,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.278
+    m_Value: 0.465
   smoothness:
     m_OverrideState: 1
     m_Value: 0.225
