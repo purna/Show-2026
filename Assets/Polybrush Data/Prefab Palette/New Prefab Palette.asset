@@ -335,7 +335,7 @@ MonoBehaviour:
     name: Oak_Stump_05
   - gameObject: {fileID: 163256, guid: 548ad5876a2ff7a408da393e378bd988, type: 3}
     settings:
-      m_Strength: 98.05143
+      m_Strength: 34.600655
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}

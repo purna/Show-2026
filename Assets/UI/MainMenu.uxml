@@ -1,0 +1,35 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElementsSchema.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/UI.uss?fileID=7433441132597879392&amp;guid=2840681b640fb4b3dbff6ac40b68043f&amp;type=3#UI" />
+    <ui:VisualElement class="root-container">
+        <ui:VisualElement name="right-sidebar" class="right-sidebar">
+            <ui:VisualElement name="sidebar-top" class="sidebar-section">
+                <ui:VisualElement class="sidebar-row">
+                    <ui:VisualElement name="panel-quest" class="sliding-panel">
+                        <ui:Label text="MISSION LOG" class="panel-header" />
+                        <ui:ScrollView name="quest-list" />
+                    </ui:VisualElement>
+                    <ui:Button name="btn-quest-toggle" text="Q" title="Toggle Quests" class="ui-toggle" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="sidebar-bottom" class="sidebar-section">
+                <ui:VisualElement class="sidebar-row">
+                    <ui:VisualElement name="panel-inv" class="sliding-panel">
+                        <ui:Label text="STORAGE CONTAINMENT" class="panel-header" />
+                        <ui:ScrollView name="inv-list" />
+                    </ui:VisualElement>
+                    <ui:Button name="btn-inv-toggle" text="I" title="Toggle Inventory" class="ui-toggle" />
+                </ui:VisualElement>
+                <ui:VisualElement class="sidebar-row">
+                    <ui:VisualElement name="panel-actions" class="sliding-panel">
+                        <ui:Label text="SYSTEM ACTIONS" class="panel-header" />
+                        <ui:ScrollView name="actions-list" />
+                    </ui:VisualElement>
+                    <ui:Button name="btn-actions-toggle" text="A" title="Toggle Actions" class="ui-toggle" />
+                </ui:VisualElement>
+                <ui:VisualElement class="sidebar-row">
+                    <ui:Button name="btn-sound-toggle" text="VOL" title="Mute/Unmute Audio Engine" class="ui-toggle" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

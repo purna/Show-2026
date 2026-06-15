@@ -1,0 +1,239 @@
+/* ===== VARIABLES & CORE STYLE ===== */
+.root-container {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    -unity-font-style: bold;
+    text-transform: uppercase;
+}
+
+/* ===== OVERLAYS (START / WIN SCREEN) ===== */
+.screen-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 1, 5, 0.95);
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.screen-title-start {
+    font-size: 64px;
+    color: rgb(255, 170, 0); /* Amber */
+    letter-spacing: 10px;
+    margin-bottom: 5px;
+}
+
+.screen-title-win {
+    font-size: 64px;
+    color: rgb(0, 255, 170); /* Neon Success Green */
+    letter-spacing: 10px;
+    margin-bottom: 5px;
+}
+
+.screen-subtitle {
+    font-size: 20px;
+    color: rgba(255, 170, 0, 0.6);
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+/* ===== RIGHT SIDEBAR LAYOUT ===== */
+.right-sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 320px;
+    padding: 20px;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.sidebar-section {
+    align-items: flex-end;
+}
+
+.sidebar-row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 12px;
+}
+
+/* ===== UI TOGGLE BUTTONS ===== */
+.ui-toggle {
+    width: 54px;
+    height: 54px;
+    min-width: 48px;
+    min-height: 48px;
+    background-color: rgba(0, 10, 20, 0.8);
+    border-width: 1px;
+    border-color: rgb(0, 242, 255);
+    border-radius: 4px;
+    color: rgb(0, 242, 255);
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.15s, scale 0.1s;
+}
+
+.ui-toggle:hover {
+    background-color: rgba(0, 242, 255, 0.2);
+}
+
+.ui-toggle:active {
+    scale: 0.9;
+}
+
+.ui-toggle--active {
+    background-color: rgba(0, 242, 255, 0.3);
+    border-color: rgb(0, 255, 170);
+    color: rgb(0, 255, 170);
+}
+
+/* ===== SLIDEOUT DATA PANELS ===== */
+.sliding-panel {
+    width: 220px;
+    background-color: rgba(0, 10, 20, 0.88);
+    border-width: 1px;
+    border-color: rgb(0, 242, 255);
+    padding: 12px;
+    margin-right: 10px;
+    opacity: 0;
+    display: none;
+    transition: opacity 0.25s, scale 0.25s;
+    scale: 0.85;
+}
+
+.sliding-panel--open {
+    display: flex;
+    opacity: 1;
+    scale: 1;
+}
+
+.panel-header {
+    font-size: 14px;
+    color: rgb(255, 170, 0);
+    border-bottom-width: 1px;
+    border-color: rgb(51, 51, 51);
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+}
+
+/* ===== DYNAMIC LIST DATA CARDS ===== */
+.item-element {
+    font-size: 12px;
+    margin: 4px 0;
+    color: rgb(255, 170, 0);
+    border-left-width: 2px;
+    border-color: rgb(255, 170, 0);
+    padding-left: 6px;
+}
+
+.quest-element {
+    font-size: 12px;
+    margin: 8px 0;
+    border-bottom-width: 1px;
+    border-color: rgb(17, 17, 17);
+    padding-bottom: 6px;
+    color: white;
+}
+
+.quest-element--completed {
+    color: rgb(0, 255, 170);
+    opacity: 0.4;
+}
+
+/* ===== DIALOGUE BOX OVERLAY ===== */
+.dialogue-box {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 750px;
+    max-width: 90%;
+    background-color: rgba(0, 5, 15, 0.98);
+    border-width: 1px;
+    border-top-width: 4px;
+    border-color: rgb(0, 242, 255);
+    padding: 30px;
+    display: none;
+}
+
+.npc-name-tag {
+    color: rgb(255, 170, 0);
+    font-size: 18px;
+    margin-bottom: 12px;
+    border-bottom-width: 1px;
+    border-color: rgb(51, 51, 51);
+    padding-bottom: 4px;
+}
+
+.dialogue-text {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 25px;
+    white-space: normal;
+}
+
+.choice-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.choice-button {
+    background-color: rgba(0, 242, 255, 0.05);
+    border-width: 1px;
+    border-color: rgba(0, 242, 255, 0.3);
+    color: rgb(0, 242, 255);
+    padding: 12px;
+    width: 48%;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.choice-button:hover {
+    background-color: rgba(0, 242, 255, 0.2);
+    border-color: rgb(0, 242, 255);
+}
+
+/* ===== BANNER LOCATION LAYER ===== */
+.location-box {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    align-items: center;
+    display: none;
+}
+
+.location-name {
+    font-size: 42px;
+    color: rgb(255, 170, 0);
+}
+
+/* ===== WIPE SCREEN EFFECT ===== */
+.wipe-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(1, 1, 5);
+    transform: translate(-100%, 0);
+    transition: transform 0.5s ease-in-out;
+}
+
+.wipe-overlay--active {
+    transform: translate(0, 0);
+}
+
+.hidden {
+    display: none;
+}
