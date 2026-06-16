@@ -135,6 +135,7 @@
     <Compile Include="Assets/coverflow/Scripts/UI/CollectionView/CollectionViewCell/QuadCell.cs" />
     <Compile Include="Assets/LMHPOLY/LowPolyNature/Scripts/Environment/MovingPlatform.cs" />
     <Compile Include="Assets/LMHPOLY/LowPolyNature/Scripts/Food.cs" />
+    <Compile Include="Assets/Cartoon Capsule Pack Lite/Readme/Scripts/Readme.cs" />
     <Compile Include="Assets/coverflow/Scripts/SkyboxRotator.cs" />
     <Compile Include="Assets/coverflow/Scripts/butInfo.cs" />
     <Compile Include="Assets/FlatKit/Scripts/UvScroller.cs" />

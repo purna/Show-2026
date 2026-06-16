@@ -12,36 +12,38 @@ public class GameImageScript : MonoBehaviour
     [SerializeField] private Image gameImage;
     [SerializeField] private Button playButton;
 
-    private void Start()
-    {
-        UpdateUI();
+private void Start()
+{
+    Debug.Log($"{name} loaded {Game?.GameName}");
 
-        if (playButton != null)
-        {
-            playButton.onClick.RemoveAllListeners();
-            playButton.onClick.AddListener(OpenGameLink);
-        }
+    
+
+    UpdateUI();
+
+    if (playButton != null)
+    {
+        playButton.onClick.RemoveAllListeners();
+        playButton.onClick.AddListener(OpenGameLink);
+    }
+}
+public void UpdateUI()
+{
+    if (Game == null)
+    {
+        Debug.LogWarning($"GameScriptableObject asset is missing on {gameObject.name}!", gameObject);
+        return;
     }
 
-    private void UpdateUI()
+    if (gameImage != null)
     {
-        if (Game == null)
-        {
-            Debug.LogWarning($"GameScriptableObject asset is missing on {gameObject.name}!", gameObject);
-            return;
-        }
-
-        if (gameImage != null)
-        {
-            gameImage.sprite = Game.GameImage;
-        }
-
-        if (gameText != null)
-        {
-            gameText.text = $"{Game.GameName}\nMade by {Game.Author}";
-        }
+        gameImage.sprite = Game.GameImage;
     }
 
+    if (gameText != null)
+    {
+        gameText.text = $"{Game.GameName}\nMade by {Game.Author}";
+    }
+}
     public void OpenGameLink()
     {
         if (Game == null || string.IsNullOrWhiteSpace(Game.Link))

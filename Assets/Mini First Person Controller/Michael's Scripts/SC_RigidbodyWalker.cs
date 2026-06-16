@@ -37,48 +37,55 @@ public class SC_RigidbodyWalker : MonoBehaviour
         yaw = transform.eulerAngles.y;
     }
 
-    void Update()
+void Update()
+{
+    if (!allowLook && Input.GetMouseButtonDown(0)) 
     {
-        if (!allowLook || cameraPivot == null) return;
-
-        Vector3 up = transform.up;
-
-        // Mouse input
-        float mouseX = Input.GetAxis("Mouse X") * lookSpeed;
-        float mouseY = -Input.GetAxis("Mouse Y") * lookSpeed;
-
-        // Keyboard rotation (planet-relative)
-        float turn = 0f;
-
-        if (Input.GetKey(KeyCode.LeftArrow))
-            turn -= keyboardTurnSpeed * Time.deltaTime;
-
-        if (Input.GetKey(KeyCode.RightArrow))
-            turn += keyboardTurnSpeed * Time.deltaTime;
-
-        transform.Rotate(up, turn, Space.World);
-
-        // Camera rotation
-        yaw += mouseX;
-        pitch += mouseY;
-
-        pitch = Mathf.Clamp(pitch, -lookLimit, lookLimit);
-        yaw = Mathf.Clamp(yaw, -lookLimit, lookLimit);
-
-        // Build stable camera basis using planet up
-        Quaternion yawRot = Quaternion.AngleAxis(yaw, up);
-
-        Vector3 forward = yawRot * transform.forward;
-        forward = Vector3.ProjectOnPlane(forward, up).normalized;
-
-        Vector3 right = Vector3.Cross(up, forward);
-
-        Quaternion lookRot = Quaternion.LookRotation(forward, up);
-        Quaternion pitchRot = Quaternion.AngleAxis(pitch, right);
-
-        cameraPivot.rotation = lookRot * pitchRot;
+        EnableMouseLook();
     }
 
+if (cameraPivot == null) return;
+
+    Vector3 up = transform.up;
+
+    // 1. KEYBOARD ROTATION (Runs regardless of allowLook)
+    float turn = 0f;
+
+    if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        turn -= keyboardTurnSpeed * Time.deltaTime;
+
+    if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+        turn += keyboardTurnSpeed * Time.deltaTime;
+
+    transform.Rotate(up, turn, Space.World);
+
+    // 2. GATED MOUSE LOOK (Only runs if allowLook is true)
+    if (!allowLook) return;
+
+    // Mouse input
+    float mouseX = Input.GetAxis("Mouse X") * lookSpeed;
+    float mouseY = -Input.GetAxis("Mouse Y") * lookSpeed;
+
+    // Camera rotation
+    yaw += mouseX;
+    pitch += mouseY;
+
+    pitch = Mathf.Clamp(pitch, -lookLimit, lookLimit);
+    yaw = Mathf.Clamp(yaw, -lookLimit, lookLimit);
+
+    // Build stable camera basis using planet up
+    Quaternion yawRot = Quaternion.AngleAxis(yaw, up);
+
+    Vector3 forward = yawRot * transform.forward;
+    forward = Vector3.ProjectOnPlane(forward, up).normalized;
+
+    Vector3 right = Vector3.Cross(up, forward);
+
+    Quaternion lookRot = Quaternion.LookRotation(forward, up);
+    Quaternion pitchRot = Quaternion.AngleAxis(pitch, right);
+
+    cameraPivot.rotation = lookRot * pitchRot;
+}
     void FixedUpdate()
     {
         if (cameraPivot == null) return;
@@ -88,12 +95,8 @@ public class SC_RigidbodyWalker : MonoBehaviour
         Vector3 forward =
             Vector3.ProjectOnPlane(transform.forward, up).normalized;
 
-        Vector3 right =
-            Vector3.ProjectOnPlane(transform.right, up).normalized;
-
-        Vector3 move =
-            (forward * Input.GetAxis("Vertical") +
-             right * Input.GetAxis("Horizontal")) * speed;
+        // Only Vertical (W/S, Up/Down) drives movement now — Horizontal is handled by turning above
+        Vector3 move = forward * Input.GetAxis("Vertical") * speed;
 
         Vector3 velocity = r.velocity;
 

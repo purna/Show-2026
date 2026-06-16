@@ -11,4 +11,7 @@ public class GameScriptableObject : ScriptableObject
     public string GameName;
     [Tooltip("URL to open when Play button is clicked")]
     public string Link;
+
+    [Tooltip("The index number matching the entry in open_app.bat (0 to 40)")]
+    public int batchAppIndex; 
 }

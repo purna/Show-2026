@@ -56,6 +56,7 @@
     <Compile Include="Assets/FlatKit/[Render Pipeline] URP/Water/Editor/Tooltips.cs" />
     <Compile Include="Assets/RealBlend/Editor/RealBlendBoxCreateMode.cs" />
     <Compile Include="Assets/RealBlend/Editor/RealBlendWallCreateMode.cs" />
+    <Compile Include="Assets/Cartoon Capsule Pack Lite/Readme/Scripts/Editor/ReadmeEditor.cs" />
     <Compile Include="Assets/FlatKit/Shaders/Editor/Tooltips.cs" />
     <Compile Include="Assets/RealBlend/Editor/VertexPaintStorageEditor.cs" />
     <Compile Include="Assets/RealBlend/Editor/RealBlendCreationCore.cs" />
