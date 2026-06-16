@@ -131,7 +131,6 @@
     <Compile Include="Assets/LMHPOLY/LowPolyNature/Scripts/PlayerFollow.cs" />
     <Compile Include="Assets/coverflow/Scripts/Utility/MethodExtensionForMonoBehaviourTransform.cs" />
     <Compile Include="Assets/ShowLocation.cs" />
-    <Compile Include="Assets/Mini First Person Controller/Michael&apos;s Scripts/GameImageScript.cs" />
     <Compile Include="Assets/coverflow/Scripts/UI/CollectionView/CollectionViewCell/QuadCell.cs" />
     <Compile Include="Assets/LMHPOLY/LowPolyNature/Scripts/Environment/MovingPlatform.cs" />
     <Compile Include="Assets/LMHPOLY/LowPolyNature/Scripts/Food.cs" />

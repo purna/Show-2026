@@ -14,5 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameImage: {fileID: 0}
   Author: Aston Stammers
-  GameName: FMP
-  Link: 
+  GameName0: FMP
+  GameName1: 
+  Link0: 
+  Link1: 
+  batchAppIndex0: 9
+  batchAppIndex1: 0

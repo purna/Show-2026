@@ -14,5 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameImage: {fileID: 0}
   Author: Eddie Hill
-  GameName: FMP
-  Link: 
+  GameName0: FMP Y2
+  GameName1: FMP Y1
+  Link0: 
+  Link1: 
+  batchAppIndex0: 15
+  batchAppIndex1: 16

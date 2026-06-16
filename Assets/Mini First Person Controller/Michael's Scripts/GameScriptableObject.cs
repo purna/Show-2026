@@ -8,10 +8,19 @@ public class GameScriptableObject : ScriptableObject
 {
     public Sprite GameImage;
     public string Author;
-    public string GameName;
+
+    
+    public string GameName0;
+
+    public string GameName1;
+
+    
     [Tooltip("URL to open when Play button is clicked")]
-    public string Link;
+    public string Link0;
+    public string Link1;
+
 
     [Tooltip("The index number matching the entry in open_app.bat (0 to 40)")]
-    public int batchAppIndex; 
+    public int batchAppIndex0; 
+    public int batchAppIndex1; 
 }

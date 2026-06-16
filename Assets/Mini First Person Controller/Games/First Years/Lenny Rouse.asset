@@ -14,5 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameImage: {fileID: 0}
   Author: Lenny Rouse
-  GameName: FMP
-  Link: 
+  GameName0: FMP
+  GameName1: 
+  Link0: 
+  Link1: 
+  batchAppIndex0: 7
+  batchAppIndex1: 0
