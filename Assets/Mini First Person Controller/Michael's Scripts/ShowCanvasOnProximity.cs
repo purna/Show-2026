@@ -86,34 +86,33 @@ public class ShowCanvasOnProximity : MonoBehaviour
         }
     }
 
-    void Start()
+ void Start()
+{
+    playerController = FindFirstObjectByType<SC_RigidbodyWalker>();
+
+    initialPosition = transform.position;
+    initialRotation = transform.rotation;
+
+    randomTimeOffset = Random.Range(0f, 100f);
+    randomXDirection = Random.Range(0.7f, 1.3f);
+    randomZDirection = Random.Range(0.7f, 1.3f);
+
+    if (worldCanvas != null)
     {
-        playerController = FindFirstObjectByType<SC_RigidbodyWalker>();
+        // REMOVED: The GetComponentInChildren lines that overwrote your fields.
 
-        initialPosition = transform.position;
-        initialRotation = transform.rotation;
+        worldCanvas.SetActive(true);
+        canvasGroup = worldCanvas.GetComponent<CanvasGroup>() ?? worldCanvas.AddComponent<CanvasGroup>();
 
-        randomTimeOffset = Random.Range(0f, 100f);
-        randomXDirection = Random.Range(0.7f, 1.3f);
-        randomZDirection = Random.Range(0.7f, 1.3f);
-
-        if (worldCanvas != null)
-        {
-            if (gameText0 == null) gameText0 = worldCanvas.GetComponentInChildren<TextMeshProUGUI>(true);
-            if (gameText1 == null) gameText1 = worldCanvas.GetComponentInChildren<TextMeshProUGUI>(true);
-            if (gameTextAuthor == null) gameTextAuthor = worldCanvas.GetComponentInChildren<TextMeshProUGUI>(true);
-            if (gameImage == null) gameImage = worldCanvas.GetComponentInChildren<Image>(true);
-            if (playButton0 == null) playButton0 = worldCanvas.GetComponentInChildren<Button>(true);
-            if (playButton1 == null) playButton1 = worldCanvas.GetComponentInChildren<Button>(true);
-
-            worldCanvas.SetActive(true);
-            canvasGroup = worldCanvas.GetComponent<CanvasGroup>() ?? worldCanvas.AddComponent<CanvasGroup>();
-
-            canvasGroup.alpha = 0f;
-            canvasGroup.interactable = false;
-            canvasGroup.blocksRaycasts = false;
-        }
+        canvasGroup.alpha = 0f;
+        canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = false;
     }
+    else
+    {
+        Debug.LogError($"World Canvas reference is missing on {gameObject.name}!", this);
+    }
+}
 
     void LateUpdate()
     {

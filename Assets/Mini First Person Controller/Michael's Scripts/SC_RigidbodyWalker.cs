@@ -17,6 +17,10 @@ public class SC_RigidbodyWalker : MonoBehaviour
     public float keyboardTurnSpeed = 120f;
     public float lookLimit = 45f;
 
+    [Header("Testing Settings")]
+    [Tooltip("Uncheck this to keep your mouse visible and unlocked while testing in the editor.")]
+    public bool useCursorLocking = true;
+
     private Rigidbody r;
 
     private float pitch;
@@ -31,80 +35,87 @@ public class SC_RigidbodyWalker : MonoBehaviour
         r.freezeRotation = true;
         r.useGravity = false;
 
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        // Apply initial cursor state based on testing flag
+        if (useCursorLocking)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
 
         yaw = transform.eulerAngles.y;
     }
 
-void Update()
-{
-    if (!allowLook && Input.GetMouseButtonDown(0)) 
+    void Update()
     {
-        EnableMouseLook();
+        if (!allowLook && Input.GetMouseButtonDown(0)) 
+        {
+            EnableMouseLook();
+        }
+
+        if (cameraPivot == null) return;
+
+        Vector3 up = transform.up;
+
+        // 1. KEYBOARD ROTATION (Runs regardless of allowLook)
+        float turn = 0f;
+
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+            turn -= keyboardTurnSpeed * Time.deltaTime;
+
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+            turn += keyboardTurnSpeed * Time.deltaTime;
+
+        transform.Rotate(up, turn, Space.World);
+
+        // 2. GATED MOUSE LOOK (Only runs if allowLook is true)
+        if (!allowLook) return;
+
+        // Mouse input
+        float mouseX = Input.GetAxis("Mouse X") * lookSpeed;
+        float mouseY = -Input.GetAxis("Mouse Y") * lookSpeed;
+
+        // Camera rotation
+        yaw += mouseX;
+        pitch += mouseY;
+
+        pitch = Mathf.Clamp(pitch, -lookLimit, lookLimit);
+        yaw = Mathf.Clamp(yaw, -lookLimit, lookLimit);
+
+        // Build stable camera basis using planet up
+        Quaternion yawRot = Quaternion.AngleAxis(yaw, up);
+
+        Vector3 forward = yawRot * transform.forward;
+        forward = Vector3.ProjectOnPlane(forward, up).normalized;
+
+        Vector3 right = Vector3.Cross(up, forward);
+
+        Quaternion lookRot = Quaternion.LookRotation(forward, up);
+        Quaternion pitchRot = Quaternion.AngleAxis(pitch, right);
+
+        cameraPivot.rotation = lookRot * pitchRot;
     }
 
-if (cameraPivot == null) return;
-
-    Vector3 up = transform.up;
-
-    // 1. KEYBOARD ROTATION (Runs regardless of allowLook)
-    float turn = 0f;
-
-    if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
-        turn -= keyboardTurnSpeed * Time.deltaTime;
-
-    if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
-        turn += keyboardTurnSpeed * Time.deltaTime;
-
-    transform.Rotate(up, turn, Space.World);
-
-    // 2. GATED MOUSE LOOK (Only runs if allowLook is true)
-    if (!allowLook) return;
-
-    // Mouse input
-    float mouseX = Input.GetAxis("Mouse X") * lookSpeed;
-    float mouseY = -Input.GetAxis("Mouse Y") * lookSpeed;
-
-    // Camera rotation
-    yaw += mouseX;
-    pitch += mouseY;
-
-    pitch = Mathf.Clamp(pitch, -lookLimit, lookLimit);
-    yaw = Mathf.Clamp(yaw, -lookLimit, lookLimit);
-
-    // Build stable camera basis using planet up
-    Quaternion yawRot = Quaternion.AngleAxis(yaw, up);
-
-    Vector3 forward = yawRot * transform.forward;
-    forward = Vector3.ProjectOnPlane(forward, up).normalized;
-
-    Vector3 right = Vector3.Cross(up, forward);
-
-    Quaternion lookRot = Quaternion.LookRotation(forward, up);
-    Quaternion pitchRot = Quaternion.AngleAxis(pitch, right);
-
-    cameraPivot.rotation = lookRot * pitchRot;
-}
     void FixedUpdate()
     {
         if (cameraPivot == null) return;
 
         Vector3 up = transform.up;
 
-        Vector3 forward =
-            Vector3.ProjectOnPlane(transform.forward, up).normalized;
+        Vector3 forward = Vector3.ProjectOnPlane(transform.forward, up).normalized;
 
         // Only Vertical (W/S, Up/Down) drives movement now — Horizontal is handled by turning above
         Vector3 move = forward * Input.GetAxis("Vertical") * speed;
 
         Vector3 velocity = r.velocity;
 
-        Vector3 velocityChange =
-            move - Vector3.ProjectOnPlane(velocity, up);
+        Vector3 velocityChange = move - Vector3.ProjectOnPlane(velocity, up);
 
-        velocityChange =
-            Vector3.ClampMagnitude(velocityChange, maxVelocityChange);
+        velocityChange = Vector3.ClampMagnitude(velocityChange, maxVelocityChange);
 
         r.AddForce(velocityChange, ForceMode.VelocityChange);
 
@@ -124,6 +135,8 @@ if (cameraPivot == null) return;
     public void DisableMouseLook()
     {
         allowLook = false;
+        
+        // Always unlock cursor when looking is disabled so user can click UI
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
@@ -131,7 +144,17 @@ if (cameraPivot == null) return;
     public void EnableMouseLook()
     {
         allowLook = true;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        
+        // Only lock cursor if our testing flag permits it
+        if (useCursorLocking)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
 }
