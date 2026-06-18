@@ -95,16 +95,13 @@ public class QuadCell : iCollectionViewCell
     Renderer m_renderer;
     SpriteRenderer m_sprite;
     private GameObject Reflection;
-    private TestFlowsMichaelEdit m_testflow;
 
 
     void SetReflection()
     {
-        m_testflow = GameObject.Find("Test").GetComponent<TestFlowsMichaelEdit>();
         Reflection = gameObject.transform.GetChild(2).gameObject; // Get's the third child object from the TestCell object which is reflection.
         Reflection.GetComponent<SpriteRenderer>().sprite = gameObject.transform.GetChild(1).gameObject.GetComponent<SpriteRenderer>().sprite; // Sets the reflections sprite to our image object in the prefab. Will break if the layout of the prefab is changed though.
         Reflection.transform.localScale = gameObject.transform.GetChild(1).transform.localScale;
-        Reflection.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, m_testflow.Transparancy);
 
 
 

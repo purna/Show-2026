@@ -46,7 +46,7 @@ set "application[19]=C:\Users\nigel.morris\Show-2026\Portfolio\Eddie Hill\Miniga
 set "application[20]=C:\Users\nigel.morris\Show-2026\Portfolio\Fyhren Parry\FMP Y1\Nerror.exe"
 set "application[21]=C:\Users\nigel.morris\Show-2026\Portfolio\Fyhren Parry\Fyhren parry - Depth Defender 3D\Depth Defenders.exe"
 set "application[22]=C:\Users\nigel.morris\Show-2026\Portfolio\George Lundin\FMP Y1\George-s-FMP-Game.exe"
-set "application[23]=C:\Users\nigel.morris\Show-2026\Portfolio\George Lundin\Final build-20260615T123744Z-3-001\Final build\Year 2 assignment 1.exe"
+set "application[23]=C:\Users\nigel.morris\Show-2026\Portfolio\George Lundin\FMP Y2\RPG 3D projecct.exe"
 set "application[24]=C:\Users\nigel.morris\Show-2026\Portfolio\Imogen Devlin\FMP Y1P\My project (23).exe"
 set "application[25]=C:\Users\nigel.morris\Show-2026\Portfolio\Imogen Devlin\Imogen Devlin FMP\Pixel.exe"
 set "application[26]=C:\Users\nigel.morris\Show-2026\Portfolio\Luca Rampling\Luca Rampling -King of the Hill\King of the Hill.exe"
@@ -55,6 +55,8 @@ set "application[28]=C:\Users\nigel.morris\Show-2026\Portfolio\Luke Tanner\FMP Y
 set "application[29]=C:\Users\nigel.morris\Show-2026\Portfolio\Luke Tanner\Luke Tanner Vampire Shooter\FMP Vampire Shooter.exe"
 set "application[30]=C:\Users\nigel.morris\Show-2026\Portfolio\Nicholas Robertson\FMP Y1\Swword Game.exe"
 set "application[31]=C:\Users\nigel.morris\Show-2026\Portfolio\Nicholas Robertson\First Attempt At StanleyP Animation 2.mp4"
+set "application[32]=C:\Users\nigel.morris\Show-2026\Portfolio\Yannik Absolom\FMP Y1\"
+set "application[33]=C:\Users\nigel.morris\Show-2026\Portfolio\Yannik Absolom\FMP Y2\"
 
 
 rem Check if the specified application number exists
